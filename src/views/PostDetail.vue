@@ -1,6 +1,9 @@
 <script setup>
 import getPost from "../composibles/getPost";
 import MySpinner from "../components/MySpinner.vue";
+// import { useRoute } from "vue-router";
+// const route = useRoute();
+
 const props = defineProps({
   id: String,
 });

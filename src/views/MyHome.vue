@@ -2,6 +2,7 @@
 import PostList from "../components/PostList.vue";
 import getPosts from "../composibles/getPosts";
 import MySpinner from "../components/MySpinner.vue";
+import TagCloud from "../components/TagCloud.vue";
 
 const { posts, load } = getPosts();
 load();
@@ -11,6 +12,7 @@ load();
   <div class="home">
     <div v-if="posts.length" class="layout">
       <PostList :posts="posts"></PostList>
+      <TagCloud :posts="posts"></TagCloud>
     </div>
     <div v-else>
       <MySpinner></MySpinner>
